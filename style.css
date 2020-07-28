@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    font-family: 'Lato', sans-serif;
+    height:100%;
+    background-color: #c7ecee;
+}
+
+.score{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: #c23616;
+    color: aqua;
+}
+
+.Pscore,.Cscore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pscore p,.Cscore p{
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.intro{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 60vh;
+    transition: opacity  1s ease;
+   
+}
+
+.intro h1{
+    font-size: 3rem;
+    width: 100%;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #c23616;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background-color: #c23616;
+    color: aqua;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.fade{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease 1s;
+}
+
+.fadeout{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.phand{
+    transform: rotateY(180deg);
+}
+.hands h1{
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .game{
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+    .intro{
+        width: 100%;
+    }
+    .intro h1{
+        font-size:30px ;
+    }
+    .game{
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80vh;
+        margin-top: 20px;
+        
+    }
+    .phand,.chand{
+        width: 45%;
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 667px){
+      .score{
+          height: 20vh;
+      }
+      .phand,.chand{
+        width: 30%;
+      }
+     
+      .options{
+        display: flex;
+        flex-direction: column;
+      }
+      .game{
+          width: 95%;
+          
+          height: 80vh;
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .options{
+        display: flex;
+        flex-direction: row;
+    }
+    .hands{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .intro h1{
+        font-size:30px ;
+        width: 100%;
+    }
+    .intro{
+        margin-top: 20px;
+        width: 100%;
+    }
+  }
